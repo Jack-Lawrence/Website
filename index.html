@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Lawrence | Systems Designer & Game Developer</title>
+    <meta name="description" content="Portfolio of Jack Lawrence — Systems Designer and Game Developer specialising in Unity, C#, and gameplay systems. View projects, experience, and get in touch.">
+    <meta property="og:title" content="Jack Lawrence | Systems Designer & Game Developer">
+    <meta property="og:description" content="Systems Designer and Game Developer specialising in Unity, C#, and gameplay systems.">
+    <meta property="og:type" content="website">
+    <!-- TODO: Replace with full absolute URL once deployed, e.g. https://yourdomain.com/images/profilePhoto.png -->
+    <meta property="og:image" content="images/profilePhoto.png">
+    <meta name="theme-color" content="#0a0e1a">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <noscript>
+        <style>.content-section { display: block !important; }</style>
+        <p style="color: #e8ecf4; text-align: center; padding: 2rem;">This site requires JavaScript for full functionality. Please enable JavaScript to view the portfolio.</p>
+    </noscript>
+
+    <header class="glass-header">
+        <div class="header-top-row">
+            <div class="identity-wrapper">
+                <h1 class="name">Jack Lawrence</h1>
+                <p class="role">Systems Designer</p>
+            </div>
+            <button class="burger-btn" id="burgerBtn" aria-label="Open menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+
+        <nav class="nav-links">
+            <button class="nav-btn active" data-target="portfolio">Portfolio</button>
+            <button class="nav-btn" data-target="experience">Experience</button>
+            <button class="nav-btn" data-target="about-me">About Me</button>
+            <button class="nav-btn" data-target="contact">Contact</button>
+        </nav>
+    </header>
+
+    <!-- Mobile slide-over menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="mobile-menu-links">
+            <button class="mobile-nav-btn active" data-target="portfolio">Portfolio</button>
+            <button class="mobile-nav-btn" data-target="experience">Experience</button>
+            <button class="mobile-nav-btn" data-target="about-me">About Me</button>
+            <button class="mobile-nav-btn" data-target="contact">Contact</button>
+        </div>
+    </nav>
+
+    <main class="content-area">
+            <section id="portfolio" class="content-section active">
+                <div class="portfolio-label">
+                    <h2>Portfolio</h2>
+                    <span class="portfolio-divider"></span>
+                    <p>A curated collection of <span class="highlight-location">Systems Design</span> and <span class="highlight-location">Game Development</span> projects.</p>
+                </div>
+
+                <div class="project-grid">
+                    <div class="project-card featured" data-id="kyomen" tabindex="0" role="button" style="background-image: url('images/projectImages/png/kyomen.png');">
+                        <div class="project-content">
+                            <h3>Kyomen</h3>
+                            <p>Global Game Jam 2026</p>
+                        </div>
+                        <a href="https://ath3rox.itch.io/kyomen" class="itch-link" target="_blank" rel="noopener noreferrer" aria-label="View on Itch.io">
+                            <i class="fa-brands fa-itch-io"></i>
+                        </a>
+                    </div>
+                    <div class="project-card" data-id="stronghand" tabindex="0" role="button" style="background-image: url('images/projectImages/png/strong.png');">
+                        <div class="project-content">
+                            <h3>Strong Hand</h3>
+                            <p>Industry client project</p>
+                        </div>
+                        <a href="https://gcugames.itch.io/strong-hand" class="itch-link" target="_blank" rel="noopener noreferrer" aria-label="View on Itch.io">
+                            <i class="fa-brands fa-itch-io"></i>
+                        </a>
+                    </div>
+                    <div class="project-card" data-id="fishing" tabindex="0" role="button" style="background-image: url('images/projectImages/png/fishing.png');">
+                        <div class="project-content">
+                            <h3>Just a Chill Fishing Game</h3>
+                            <p>48-hour jam project</p>
+                        </div>
+                        <a href="https://allanowo.itch.io/just-a-chill-fishing-game" class="itch-link" target="_blank" rel="noopener noreferrer" aria-label="View on Itch.io">
+                            <i class="fa-brands fa-itch-io"></i>
+                        </a>
+                    </div>
+                    <div class="project-card" data-id="runordie" tabindex="0" role="button" style="background-image: url('images/projectImages/png/run.png');">
+                        <div class="project-content">
+                            <h3>Run or Die</h3>
+                            <p>Systems design research</p>
+                        </div>
+                        <a href="https://ath3rox.itch.io/run-or-die" class="itch-link" target="_blank" rel="noopener noreferrer" aria-label="View on Itch.io">
+                            <i class="fa-brands fa-itch-io"></i>
+                        </a>
+                    </div>
+                    <div class="project-card" data-id="wolvenwood" tabindex="0" role="button" style="background-image: url('images/projectImages/png/wolven.png');">
+                        <div class="project-content">
+                            <h3>Wolvenwood</h3>
+                            <p>Atmospheric RPG</p>
+                        </div>
+                        <a href="https://ath3rox.itch.io/wolvenwood" class="itch-link" target="_blank" rel="noopener noreferrer" aria-label="View on Itch.io">
+                            <i class="fa-brands fa-itch-io"></i>
+                        </a>
+                    </div>
+                    <div class="project-card" data-id="polyarena" tabindex="0" role="button" style="background-image: url('images/projectImages/png/arena.png');">
+                        <div class="project-content">
+                            <h3>Poly Arena</h3>
+                            <p>Multiplayer combat</p>
+                        </div>
+                        <a href="https://ath3rox.itch.io/poly-arena" class="itch-link" target="_blank" rel="noopener noreferrer" aria-label="View on Itch.io">
+                            <i class="fa-brands fa-itch-io"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="content-section">
+                <!-- Qualifications -->
+                <div class="exp-panel">
+                    <h2 class="panel-title">Qualifications</h2>
+                    <div class="exp-row">
+                        <div class="exp-card">
+                            <div class="exp-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="exp-details">
+                                <h3>BSc (Hons) Video Game Development</h3>
+                                <p class="exp-place">Glasgow Caledonian University</p>
+                                <span class="exp-status">In Progress</span>
+                            </div>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="exp-details">
+                                <h3>HND Digital Design & Development</h3>
+                                <p class="exp-place">Edinburgh College</p>
+                            </div>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="exp-details">
+                                <h3>NC Video Game Development</h3>
+                                <p class="exp-place">Edinburgh College</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Jams -->
+                <div class="exp-panel">
+                    <h2 class="panel-title">Game Jams</h2>
+                    <div class="exp-row">
+                        <div class="exp-card jam-card jam-card-link" data-project="kyomen" tabindex="0" role="button">
+                            <div class="exp-icon"><i class="fa-solid fa-gamepad"></i></div>
+                            <div class="exp-details">
+                                <h3>Global Game Jam 2026</h3>
+                                <p class="exp-role">Kyomen</p>
+                            </div>
+                        </div>
+                        <div class="exp-card jam-card jam-card-link" data-project="fishing" tabindex="0" role="button">
+                            <div class="exp-icon"><i class="fa-solid fa-fish"></i></div>
+                            <div class="exp-details">
+                                <h3>Global Game Jam 2025</h3>
+                                <p class="exp-role">Just a Chill Fishing Game</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employment -->
+                <div class="exp-panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">Previous Employment</h2>
+                        <div class="job-nav-controls">
+                            <button class="job-nav-btn" id="jobPrev" aria-label="Previous jobs"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="job-nav-btn" id="jobNext" aria-label="Next jobs"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="job-carousel-container">
+                        <div class="job-carousel-track" id="jobTrack">
+                            <div class="exp-card job-card">
+                                <div class="job-header">
+                                    <h3>Bar Supervisor</h3>
+                                    <span class="job-date">2025</span>
+                                </div>
+                                <p class="job-place">Underbelly (Edinburgh Fringe)</p>
+                                <p class="job-desc">Supervised bar operations, managed seasonal staff, and ensured smooth service during busy periods.</p>
+                            </div>
+                            <div class="exp-card job-card">
+                                <div class="job-header">
+                                    <h3>Online Assistant</h3>
+                                    <span class="job-date">2024–2025</span>
+                                </div>
+                                <p class="job-place">Sainsbury's</p>
+                                <p class="job-desc">Handled online grocery orders, stock management, and ensured timely delivery preparation.</p>
+                            </div>
+                            <div class="exp-card job-card">
+                                <div class="job-header">
+                                    <h3>Bar Staff</h3>
+                                    <span class="job-date">2024</span>
+                                </div>
+                                <p class="job-place">Underbelly (Edinburgh Fringe)</p>
+                                <p class="job-desc">Worked as part of a festival team delivering high-volume bar service during peak season.</p>
+                            </div>
+                            <div class="exp-card job-card">
+                                <div class="job-header">
+                                    <h3>Lead Video Editor</h3>
+                                    <span class="job-date">2023–2024</span>
+                                </div>
+                                <p class="job-place">Olli43LTD</p>
+                                <p class="job-desc">Produced and edited engaging video content for a large online audience, meeting deadlines and creative briefs.</p>
+                            </div>
+                            <div class="exp-card job-card">
+                                <div class="job-header">
+                                    <h3>Bartender / FOH</h3>
+                                    <span class="job-date">2022–2023</span>
+                                </div>
+                                <p class="job-place">The Broughton</p>
+                                <p class="job-desc">Provided bar service, front-of-house duties, and maintained excellent customer service in an upmarket venue.</p>
+                            </div>
+                            <div class="exp-card job-card">
+                                <div class="job-header">
+                                    <h3>Crew Trainer</h3>
+                                    <span class="job-date">2021–2022</span>
+                                </div>
+                                <p class="job-place">McDonald's</p>
+                                <p class="job-desc">Trained new employees, ensured company standards were met, and supported management in day-to-day operations.</p>
+                            </div>
+                            <div class="exp-card job-card">
+                                <div class="job-header">
+                                    <h3>Crew Member</h3>
+                                    <span class="job-date">2018–2021</span>
+                                </div>
+                                <p class="job-place">McDonald's</p>
+                                <p class="job-desc">Worked in a fast-paced environment delivering high-quality customer service, food preparation, and maintaining hygiene standards.</p>
+                            </div>
+                            <div class="exp-card job-card">
+                                <div class="job-header">
+                                    <h3>Placement Student</h3>
+                                    <span class="job-date">2017 & 2018</span>
+                                </div>
+                                <p class="job-place">Storm ID</p>
+                                <p class="job-desc">Completed two 5-day placements, working with a mentor and project manager. Took initiative to complete tasks independently.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about-me" class="content-section">
+                <div class="about-grid">
+                    <!-- Top-left: About Me -->
+                    <div class="exp-panel about-bio-panel">
+                        <h2 class="panel-title">About Me</h2>
+                        <p class="about-text">Hi, I'm Jack, a fourth-year Games Development student working towards a first-class degree. I'm an aspiring Systems Designer focused on creating unique, engaging experiences, holding an NC in Video Game Development and an HND in Digital Design &amp; Development. I have built a strong technical foundation in Unity, C#, and GML.</p>
+                        <p class="about-text">I love refining complex mechanics through iteration to make gameplay feel both intuitive and meaningful. My dissertation explores how multimodal feedback—visual, auditory, and motion effects—influences player perception of weapon realism and satisfaction. Alongside this research, I am designing and programming as part of a team for a game we are entering into the upcoming Tranzfuzer competition. Outside of development, I'm usually at the gym, walking Munros, or playing the latest game releases!</p>
+                    </div>
+                    <!-- Top-right: Current Project -->
+                    <div class="exp-panel about-project-panel">
+                        <h2 class="panel-title">Current Project</h2>
+                        <div class="current-project-card">
+                            <div class="current-project-header">
+                                <picture>
+                                    <source srcset="images/projectImages/webp/kyomen.webp" type="image/webp">
+                                    <img src="images/projectImages/png/kyomen.png" alt="Kyomen" class="current-project-img" loading="lazy">
+                                </picture>
+                                <div class="current-project-title-group">
+                                    <h3>Kyomen</h3>
+                                    <p class="current-project-status"><i class="fa-solid fa-circle"></i> In Development</p>
+                                </div>
+                            </div>
+                            <p class="current-project-desc">After placing 2nd at the 2026 Global Game Jam, I have moved into a multidisciplinary role to help refine our project for the upcoming Tranzfuzer competition. Due to our small team size, I have been bridging the gap between technical implementation and visual design, taking ownership of the HUD and UI art while simultaneously programming core systems. My work involves developing the Talent Tree, item and menu frameworks, and the persistence logic required to maintain data between environments. I also built the data logging systems to store player variables and settings, ensuring that the interface and the backend function as a single, cohesive unit.</p>
+                        </div>
+                    </div>
+                    <!-- Bottom-left: Tools -->
+                    <div class="exp-panel about-tools-panel">
+                        <h2 class="panel-title">Tools &amp; Software</h2>
+                        <div class="tools-grid">
+                            <div class="tool-item"><div class="exp-icon"><i class="fa-brands fa-unity"></i></div><span>Unity</span></div>
+                            <div class="tool-item"><div class="exp-icon"><i class="fa-solid fa-gamepad"></i></div><span>Unreal</span></div>
+                            <div class="tool-item"><div class="exp-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div><span>GameMaker</span></div>
+                            <div class="tool-item"><div class="exp-icon"><i class="fa-brands fa-html5"></i></div><span>HTML</span></div>
+                            <div class="tool-item"><div class="exp-icon"><i class="fa-brands fa-css3-alt"></i></div><span>CSS</span></div>
+                            <div class="tool-item"><div class="exp-icon"><i class="fa-brands fa-js"></i></div><span>JS</span></div>
+                            <div class="tool-item"><div class="exp-icon"><i class="fa-solid fa-code"></i></div><span>C#</span></div>
+                            <div class="tool-item"><div class="exp-icon"><i class="fa-solid fa-pen-nib"></i></div><span>Illustrator</span></div>
+                            <div class="tool-item"><div class="exp-icon"><i class="fa-brands fa-github"></i></div><span>GitHub</span></div>
+                            <div class="tool-item"><div class="exp-icon"><i class="fa-solid fa-image"></i></div><span>Photoshop</span></div>
+                        </div>
+                    </div>
+                    <!-- Bottom-right: Photo -->
+                    <div class="exp-panel about-image-panel">
+                        <picture>
+                            <source srcset="images/profilePhoto.webp" type="image/webp">
+                            <img src="images/profilePhoto.png" alt="Jack Lawrence" loading="lazy">
+                        </picture>
+                        <a href="https://uk.linkedin.com/in/jack-lawrence-871901280" class="linkedin-link" target="_blank" rel="noopener noreferrer" aria-label="View LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="content-section">
+                <!-- Removed top h1, moved inside panel as h2 -->
+                
+                <div class="exp-panel">
+                    <div class="contact-panel-header">
+                        <h2 class="panel-title">Contact</h2>
+                        <div class="contact-header-info">
+                            <p class="contact-intro">Currently based in <span class="highlight-location">Edinburgh, UK</span>. Open to new opportunities.</p>
+                            <div class="contact-status-box">
+                                <span class="status-dot"></span> Available for work
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-cards-row">
+                        <!-- Form Box -->
+                        <div class="exp-card contact-card-item">
+                            <div class="contact-card-inner">
+                                <div class="card-title-group">
+                                    <h3 class="panel-title">Send a Message</h3>
+                                    <p class="card-subtitle">Got a question or proposal? Drop me a line.</p>
+                                </div>
+                                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                                    <input type="hidden" name="access_key" value="1de4eefb-d43e-4c08-b694-4d36ecb793b2">
+                                    <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display:none !important" tabindex="-1" autocomplete="off">
+                                    <label for="contactName" class="sr-only">Name</label>
+                                    <input type="text" id="contactName" name="name" placeholder="Name" class="glass-input" required>
+                                    <label for="contactEmail" class="sr-only">Email</label>
+                                    <input type="email" id="contactEmail" name="email" placeholder="Email" class="glass-input" required>
+                                    <label for="contactMessage" class="sr-only">Message</label>
+                                    <textarea id="contactMessage" name="message" placeholder="Message" class="glass-input" required></textarea>
+                                    <button type="submit" class="glass-btn">Send</button>
+                                    <p class="form-status" id="formStatus" aria-live="polite"></p>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Box -->
+                        <div class="exp-card contact-card-item">
+                            <div class="contact-card-inner">
+                                <div class="card-title-group">
+                                    <h3 class="panel-title">Connect</h3>
+                                    <p class="card-subtitle">Connect with me on social media or view my work.</p>
+                                </div>
+                                <div class="social-links">
+                                    <a href="mailto:contact@jacklawrence.com" class="social-btn email">
+                                        <i class="fa-solid fa-envelope"></i> Email
+                                    </a>
+                                    <a href="https://github.com/Jack-Lawrence" target="_blank" rel="noopener noreferrer" class="social-btn github">
+                                        <i class="fa-brands fa-github"></i> Jack-Lawrence
+                                    </a>
+                                    <a href="https://uk.linkedin.com/in/jack-lawrence-871901280" target="_blank" rel="noopener noreferrer" class="social-btn linkedin">
+                                        <i class="fa-brands fa-linkedin"></i> Jack Lawrence
+                                    </a>
+                                    <a href="https://ath3rox.itch.io" target="_blank" rel="noopener noreferrer" class="social-btn itch">
+                                        <i class="fa-solid fa-gamepad"></i> Ath3rox
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 Jack Lawrence</p>
+        </footer>
+    </main>
+
+    <div class="project-overlay" id="projectOverlay" role="dialog" aria-modal="true" aria-label="Project details">
+        <div class="overlay-bg" id="overlayBg"></div>
+        <div class="overlay-container">
+            <button class="close-btn" id="closeBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="overlay-content">
+                <div class="project-info">
+                    <h2 class="project-title" id="overlayTitle">Project Title</h2>
+                    <div class="project-info-scroll">
+                        <div class="project-description" id="overlayDesc">
+                            <p>Project description goes here...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-media">
+                    <div class="carousel-container" id="overlayCarousel">
+                        <div class="carousel-placeholder">Media Carousel Placeholder</div>
+                    </div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="itch-play-btn" id="overlayItchLink">
+                        <i class="fa-brands fa-itch-io"></i> Play on Itch.io
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
