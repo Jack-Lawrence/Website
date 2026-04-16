@@ -26,6 +26,7 @@ body {
     background: radial-gradient(circle at 18% 18%, #111827 0%, #0d1220 42%, #0a0e1a 100%);
     color: var(--text-primary);
     height: 100vh; /* Fixed height for one-page feel */
+    height: 100dvh;
     width: 100vw;
     overflow: hidden; /* Prevent body scroll */
     position: relative;
@@ -162,6 +163,7 @@ body {
     margin-right: auto;
     text-align: center;
     height: calc(100vh - 150px); 
+    height: calc(100dvh - 150px); 
     overflow-y: auto; 
     padding-bottom: 10px; 
     
@@ -236,6 +238,7 @@ body {
     right: 0;
     width: min(320px, 85vw);
     height: 100vh;
+    height: 100dvh;
     background: rgba(10, 14, 26, 0.97);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -424,8 +427,9 @@ body {
     }
 
     .content-area {
-        margin-top: 85px;
-        height: calc(100vh - 85px);
+        margin-top: 97px;
+        height: calc(100vh - 97px);
+        height: calc(100dvh - 97px);
         width: 95vw;
     }
 }
