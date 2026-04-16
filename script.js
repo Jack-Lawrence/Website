@@ -96,7 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (btn.getAttribute('data-target') === initialHash) btn.classList.add('active');
         });
         // Reset scroll after browser tries to jump to the hash target
-        requestAnimationFrame(() => window.scrollTo(0, 0));
+        requestAnimationFrame(() => {
+            window.scrollTo(0, 0);
+            if (contentArea) contentArea.scrollTop = 0;
+        });
     }
 
     // Mobile Burger Menu Logic
