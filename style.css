@@ -894,11 +894,27 @@ body {
 }
 
 /* Social Button Hovers */
-.social-btn:not(.itch):hover {
+.social-btn.email:hover {
     background: var(--accent-soft);
     border-color: var(--accent-border);
     color: var(--accent-color);
     box-shadow: 0 0 20px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.social-btn.github:hover {
+    background: rgba(240, 246, 252, 0.10);
+    border-color: rgba(240, 246, 252, 0.25);
+    color: #f0f6fc;
+    box-shadow: 0 0 20px rgba(240, 246, 252, 0.12);
+    transform: translateY(-2px);
+}
+
+.social-btn.linkedin:hover {
+    background: rgba(10, 102, 194, 0.16);
+    border-color: rgba(10, 102, 194, 0.28);
+    color: #0A66C2;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.14);
     transform: translateY(-2px);
 }
 
